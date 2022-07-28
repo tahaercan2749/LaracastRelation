@@ -20,8 +20,13 @@
 
 @foreach($menulangs as $mlang)
     {{$mlang->name.' => '.$mlang->parentMenu->name}} <br>
+<<<<<<< HEAD
     &emsp;<h1>{{$mlang->getPage->title}}</h1><br>
     &emsp;<p>{{$mlang->getPage->content}}</p><br>
+=======
+    &emsp;<h1>{{$mlang->getPage?->title}}</h1><br> {{-- ? ile sorgu hatası engelleniyor --}}
+    &emsp;<p>{{$mlang->getPage?->content}}</p><br>
+>>>>>>> f1bcf5f (ilişki hata sorunu giderildi welcome viewde yazılı)
 @endforeach
 
 </body>
