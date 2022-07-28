@@ -20,8 +20,9 @@
 
 @foreach($menulangs as $mlang)
     {{$mlang->name.' => '.$mlang->parentMenu->name}} <br>
-    &emsp;<h1>{{$mlang->getPage->title}}</h1><br>
-    &emsp;<p>{{$mlang->getPage->content}}</p><br>
+
+    &emsp;<h1>{{$mlang->getPage?->title}}</h1><br> {{-- ? ile sorgu hatası engelleniyor --}}
+    &emsp;<p>{{$mlang->getPage?->content}}</p><br>
 @endforeach
 
 </body>
